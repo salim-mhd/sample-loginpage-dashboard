@@ -1,0 +1,42 @@
+ {{!-- header --}}
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container p-2">
+                <a class="navbar-brand text-capitalize fs-2 active fw-bolder fst-italic" href="#">
+                    {{#if uservalid}}
+                    {{uservalid.name}}
+                    {{/if}}
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button style="color:#fff; background-color: green;" class="btn btn-outline-dark"
+                                type="submit">Search</button>
+                        </form>
+                    </span>
+                    <span class="navbar-text">
+                        <form class="d-flex">
+                            <a class="nav-link fs-6 text active" href="/adminlogin/logout">Log Out</a>
+                        </form>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>

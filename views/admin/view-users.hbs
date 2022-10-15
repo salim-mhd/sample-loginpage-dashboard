@@ -1,0 +1,33 @@
+
+<section>
+    <div class="container mt-5">
+        <div class="mb-3" style="font-size:2em; font-weight:bold;">Users Info</div>
+        <div class="d-grid gap-2 d-flex justify-content-end mb-4">
+            <a class="btn btn-primary" href="/adminlogin/add-user">Add User</a>
+        </div>
+        <table class="table">
+  <thead>
+    <tr style="background-color:black; color: #ffff;">
+      <th scope="col">No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+      <th scope="col">Update</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each user}}
+    <tr>
+      <th scope="row">{{@index}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.password}}</td>
+      <td><a href="/admin/edit/{{this._id}}"><button type="button" class="btn btn-warning">Edit</button></a></td>
+      <td><a href="/admin/delete/{{this._id}}"><button type="button" class="btn btn-danger">Delete</button></a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+    </div>
+</section>
